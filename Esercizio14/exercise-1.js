@@ -1,10 +1,8 @@
 function greet(greeting) {
-    function hello() {
-        return hello("Hello");
+    return function (name) {
+        return `${greeting} ${name}`;
     }
-    function torrone() {
-        return torrone("Paul");
-    }
+
 }
 
 const greetWithHello = greet("Hello");
