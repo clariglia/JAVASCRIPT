@@ -1,22 +1,24 @@
-const sum = (a, b) => {
+const sum = (a, b) =>  a+b;
+/* {
   return a + b;
-}
+} */
 
-const subtract = (a, b) => {
+const subtract = (a, b) => a-b; 
+/* {
   return a - b;
-}
+} */
 
-const multiply = (a, b) => {
+const multiply = (a, b) => a*b;
+/* {
   return a * b;
-}
+} */
 
-const divide = (a, b) => {
+const divide = (a, b) => a/b;
+/* {
   return a / b;
-}
+} */
 
-const log = (value) => {
-  console.log(value);
-}
+const log = (value) => console.log(value);
+log(divide(subtract(multiply(sum(2,4), sum(5,2)),2),5));
 
 
-/* `((2 + 4) * (5 + 2) - 2) / 5` */
