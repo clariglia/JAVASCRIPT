@@ -1,5 +1,14 @@
 function memoize(fn) {
   let cache = {}
+  return (num) =>{
+    if(!(num in cache)){
+      return `Calculating result for: ${num} -> ${cache[num]}`;
+    }
+    else{
+      cache[num]=fn(num);
+      return `Fetching from cache for: ${num} > ${cache[num]}`
+    }
+  }
   }
 
 function factorial(x) {

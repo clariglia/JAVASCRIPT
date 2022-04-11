@@ -1,29 +1,30 @@
 function calculate(){
     let total = 0;
     return {
-        add(num){
+        add: function add(num){
             total += num
             return this;
         },
-        multiply(num){
+        multiply: function multiply(num){
             total *= num
             return this;
         },
-        sub(num){
+        sub: function sub(num){
             total -= num
             return this;
         },
-        divide(num){
+        divide: function divide(num){
             total /= num
             return this;
         },
-        printResult(){
+        print: function printResult(){
             console.log(total)
         }
     }
 
 }
 
+console.log(calculate())
 
 const calculator = calculate();
 calculator .add(2).add(4).multiply(3).sub(1).sub(3).divide(2).printResult(); 
