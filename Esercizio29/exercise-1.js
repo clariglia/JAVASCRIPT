@@ -1,7 +1,5 @@
 function adultFilter(persons) {
-  persons = persons.filter(persons => persons.age>=18)
-  return persons
-  
+  return persons.filter(element => element.age>=18) 
 }
 
 
