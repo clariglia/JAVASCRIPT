@@ -1,28 +1,32 @@
 function memoize(fn) {
   let cache = {}
-  return (num) =>{
-    if(!(num in cache)){
-      return `Calculating result for: ${num} -> ${cache[num]}`;
+  const funzioneCorrente = fn;
+  return function (parametro){
+    if(parametro in cache){
+      return `Fetching from cache for: ${parametro} -> ${cache[parametro]}`
     }
     else{
-      cache[num]=fn(num);
-      return `Fetching from cache for: ${num} > ${cache[num]}`
+      cache[parametro] = funzioneCorrente(parametro)
+      return `Calculating result for: ${parametro} -> ${cache[parametro]}`
     }
   }
-  }
+}
 
-function factorial(x) {
+function calcoloFattoriale(x) {
   if (x === 0) {
     return 1;
   }
 
-   return x * factorial(x - 1);
+   return x * calcoloFattoriale(x - 1);
 }
 
 
 
-factorial = memoize(factorial);
+const factorial = memoize(calcoloFattoriale);
 console.log(factorial(10));
 console.log(factorial(6));
 console.log(factorial(5));
+console.log(factorial(5));
+console.log(factorial(7));
+console.log(factorial(6));
 
