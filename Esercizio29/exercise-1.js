@@ -4,7 +4,7 @@ function adultFilter(persons) {
 
 
 const persons = [
-  { name: 'Paul', age: 16 },
+  { name: 'Paul', age: 0 },
   { name: 'George', age: 17 },
   { name: 'Lucas', age: 21 },
   { name: 'Marco', age: 32 },
@@ -16,6 +16,6 @@ const persons = [
   { name: 'Alice', age: 28 }
 ];
 
-const adults = adultFilter(persons);
+ const adults = adultFilter(persons);
 console.log(persons);
 console.log(adults);
