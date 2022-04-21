@@ -16,6 +16,23 @@ class BankAccount {
   view() {
     console.log(this.#amount);
   }
+  get calculate(){
+    return this.#amount;
+  }
+  set calculate(param){
+    return this.#amount = param;
+  }
+}
+
+class BankAccount extends bankAccountVip{
+  constructor(result){
+    this.result = result;
+  }
+  static calcolo(result){
+    if(result instanceof BankAccountVip){
+      
+    }
+  }
 }
 
 const bankAccountVip = new BankAccountVip(1000);
