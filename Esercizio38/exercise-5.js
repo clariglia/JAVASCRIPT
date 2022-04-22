@@ -24,16 +24,21 @@ class BankAccount {
   }
 }
 
-class BankAccount extends bankAccountVip{
-  constructor(result){
-    this.result = result;
+class BankAccountVip extends BankAccount{
+  constructor(param){
+    super(param)
   }
-  static calcolo(result){
-    if(result instanceof BankAccountVip){
-      
+  deposit(param){
+    if(this.calculate >= 1000){
+      param += (param * 3 / 100)
+      this.calculate += param;
+    }
+    else{
+      this.calculate += param;
     }
   }
 }
+
 
 const bankAccountVip = new BankAccountVip(1000);
 bankAccountVip.deposit(500);
@@ -41,3 +46,4 @@ bankAccountVip.deposit(1200);
 bankAccountVip.withdraw(800);
 bankAccountVip.deposit(3500);
 bankAccountVip.view();
+
