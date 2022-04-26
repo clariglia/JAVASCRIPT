@@ -3,9 +3,10 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
   }
-  static fromObject(){
-    return obj
-  }
+    static fromObject(param){
+    const abc = new Person(param.firstName, param.lastName)
+    return abc
+  } 
 }
 
 const obj = {
@@ -14,4 +15,5 @@ const obj = {
 };
 
 const person = Person.fromObject(obj);
-console.log(`${person.firstName} ${person.lastName}`);
+/* console.log(`${person.firstName} ${person.lastName}`); */
+console.log(person)
