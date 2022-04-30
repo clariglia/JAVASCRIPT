@@ -9,10 +9,8 @@ class Person {
   toJson() {
     return JSON.stringify(this);
   }
-  fromJson(json) {
-    const obj = Person;
-    obj = JSON.parse(json);
-    return obj;
+  static fromJson(json) {
+    return json = JSON.parse(json);
   }
 }
 
