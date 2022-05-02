@@ -29,6 +29,18 @@ class BankAccount {
     console.log(this.#amount);
   }
 }
+class NegativeAmountError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "Error";
+  }
+}
+class WithdrawNotPermittedError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "Error";
+  }
+}
 
 try {
   const bankAccount = new BankAccount(1000);
