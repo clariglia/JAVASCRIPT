@@ -34,4 +34,23 @@ const jobs = [
   }
 ];
 
-// core here
+function fetchPersonById(id){
+  return new Promise((resolve)=>{
+    if(persons.find(param => param.id === id)){
+      setTimeout(() => 
+      resolve(persons.find(param => param.id === id))
+      )}
+  }, 1000)
+}
+function fetchJobById(id){
+  return new Promise((resolve)=>{
+    if(jobs.find(element => element.id === id)){
+      setTimeout(() => 
+      resolve(jobs.find(element => element.id === id))
+      )}
+  }, 500)
+} 
+
+Promise.race([fetchPersonById(1), fetchJobById(2)])
+.then((person) => console.log(person))
+.catch((err) => console.log(err))

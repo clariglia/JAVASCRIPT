@@ -33,7 +33,18 @@ function fetchPersonById(id) {
   });
 }
 
-fetchPersonById(2)
+/* fetchPersonById(2)
   .then((personJson) => JSON.parse(personJson))
   .then((person) => console.log(person))
-  .catch((err) => console.error(err));
+  .catch((err) => console.error(err)); */
+  async function functionperson(){
+    try{
+      let result = await fetchPersonById(2);
+      let result2 = JSON.parse(result);
+      return console.log(result2);
+    }
+    catch(err){
+      console.log(err)
+    }
+   }
+   functionperson()
