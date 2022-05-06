@@ -3,5 +3,6 @@ function sum(...array) {
   return array.reduce((sum, value) => sum + value)
 }
 
-/* const numbers = [1, 2, 3]; */
-console.log(sum(1, 2, 3));
+
+const numbers = [1, 2, 3];
+console.log(sum(...numbers));
