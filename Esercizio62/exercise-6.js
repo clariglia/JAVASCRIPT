@@ -40,7 +40,7 @@ function fetchPersonById(id) {
   async function functionperson(){
     try{
       let result = await fetchPersonById(2);
-      let result2 = JSON.parse(result);
+      let result2 = await JSON.parse(result);
       return console.log(result2);
     }
     catch(err){
