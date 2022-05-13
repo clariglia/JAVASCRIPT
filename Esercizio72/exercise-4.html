@@ -20,5 +20,16 @@
 </html>
 
 <script>
-  // code here
+  const nome = document.getElementById('firstName');
+  const cognome = document.getElementById('lastName');
+  const anni = document.getElementById('age');
+  const person = {
+    firstName: nome.value,
+    lastName: cognome.value,
+    age: anni.value
+  };
+  const form = document.querySelector('form')
+  form.setAttribute('data-person', JSON.stringify(person))
+  console.log(form, person)
+
 </script>
