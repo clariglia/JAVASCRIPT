@@ -10,5 +10,32 @@
 </html>
 
 <script>
-  // Code here
+  function initForm(){
+    let name = document.createElement('input')
+    name.setAttribute('id', 'nome')
+    name.setAttribute('placeholder', 'FirstName')
+    let surname = document.createElement('input')
+    surname.setAttribute('id', 'cognome')
+    surname.setAttribute('placeholder', 'Last Name')
+    let age = document.createElement('input')
+    age.setAttribute('type', 'number')
+    age.setAttribute('placeholder', 'Age')
+    age.setAttribute('id', 'anni')
+    let form = document.querySelector('#person-form')
+    form.append(name)
+    form.append(surname)
+    form.append(age)
+  }
+  let button = document.querySelector('button')
+  button.addEventListener('click', (event) => {
+    event.preventDefault()
+    let person = {
+      name: document.querySelector('#nome').value,
+      surname: document.querySelector('#cognome').value,
+      age: document.querySelector('#anni').value
+    }
+    console.log(person)
+  })
+  
+  window.addEventListener('load', initForm())
 </script>

@@ -14,5 +14,14 @@
 </html>
 
 <script>
-  // code here
+  let li = document.querySelectorAll('li');
+  li.forEach((element) =>{ 
+    element.addEventListener('mouseover', () =>{
+    element.style.backgroundColor = 'red';
+  })
+    element.addEventListener('mouseout', () =>{
+      element.style.backgroundColor = 'transparent';
+    })
+  })
+
 </script>

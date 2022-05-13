@@ -11,6 +11,23 @@
 </html>
 
 <script>
-  let tr = document.createElement('tr');
-  let td = document.createElement('td');
-</script>)
+  function addRow(){
+    let table = document.getElementById("person-table");
+    let row = document.createElement('tr')
+     let cella1 = document.createElement('td')
+    cella1.innerText = 'First Name';
+    let cella2 = document.createElement('td')
+    cella2.innerText = 'Last Name';
+    let cella3 = document.createElement('td')
+    cella3.innerText = 'Age';
+    table.appendChild(row)
+    row.appendChild(cella1)
+    row.appendChild(cella2)
+    row.appendChild(cella3)
+  }
+  let button = document.querySelector('#add-row')
+  button.addEventListener('click', addRow)
+
+  
+
+</script>
